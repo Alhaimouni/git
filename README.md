@@ -12,39 +12,34 @@ git commit                   ==> commit the staged files
 <br>
 git branch                   ==> to know my local branches 
 <br>
-
 git remote -v                ==> to know the name of remote repo
 <br>
-
 git push                     ==> push the changes from local repo to remote
 <br>
-
 git pull                     ==> pull and merge from remote to local repo
 <br>
-
 git config --list	           ==> to get the list of git configrations
 <br>
-
-git config --global --edit   ==> edit configrations from editor<br>
-
-git init                     ==> to start and create git file <br>
-
-git remote add origin <ssh>  ==> to add remote repo to my local repo<br>
-
-
-git branch                   ==> to see all branches <br>
-
-git branch <anyname>         ==> to create a branch with name<br>
-
-git checkout <exist branch>  ==> to go to spicified branch<br>
-
-git branch -d <branchNme>    ==> delete spicified branch <br>
-
-git checkout -b <branchNme>  ==> create a branch and go to it direct<br>
-
-git branch -m <newName>      ==> rename current branch<br>
-
-git merge <branchName>       ==> merge the selected branch with the spicified branch<br>
+git config --global --edit   ==> edit configrations from editor
+<br>
+git init                     ==> to start and create git file
+<br>
+git remote add origin <ssh>  ==> to add remote repo to my local repo
+<br>
+git branch                   ==> to see all branches
+<br>
+git branch <anyname>         ==> to create a branch with name
+<br>
+git checkout <exist branch>  ==> to go to spicified branch
+<br>
+git branch -d <branchNme>    ==> delete spicified branch
+<br>
+git checkout -b <branchNme>  ==> create a branch and go to it direct
+<br>
+git branch -m <newName>      ==> rename current branch
+<br>
+git merge <branchName>       ==> merge the selected branch with the spicified branch
+<br>
 
 
 
