@@ -1,4 +1,4 @@
-# git
+# GIT
 Git and Github repo
 
 
