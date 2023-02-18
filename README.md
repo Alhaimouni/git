@@ -1,50 +1,76 @@
-# GIT
-Git and Github repo
-
-
-git clone                    ==> clone the repo to my local machine
+# GIT & GITHUB
+git clone                         ====> clone the repo to my local machine
 <br>
-git status                   ==> to check for the unstaged updates for files and folders 
+git status                        ====> to check for the unstaged updates for files and folders 
 <br>
-git add                      ==> stage files to add them to local repo
+git add                           ====> stage files to add them to local repo
 <br>
-git commit                   ==> commit the staged files 
+git commit                        ====> commit the staged files 
 <br>
-git branch                   ==> to know my local branches 
+git branch                        ====> to know my local branches 
 <br>
-git remote -v                ==> to know the name of remote repo
+git remote -v                     ====> to know the name of remote repo
+<br>     
+git push                          ====> push the changes from local repo to remote
 <br>
-git push                     ==> push the changes from local repo to remote
+git pull                          ====> pull and merge from remote to local repo
 <br>
-git pull                     ==> pull and merge from remote to local repo
+git reset head <file name>        ====> to delete any file from stage area we use
 <br>
-git config --list	           ==> to get the list of git configrations
+git reset .                       ====> clear all staging area
 <br>
-git config --global --edit   ==> edit configrations from editor
+git reset --soft HEAD^            ====> To keep the changes from the commit you want to undo
 <br>
-git init                     ==> to start and create git file
+git reset --hard HEAD^            ====> To destroy the changes from the commit you want to undo
 <br>
-git remote add origin <ssh>  ==> to add remote repo to my local repo
+git reset --hard <commitId>       ====> to make this element the head
 <br>
-git branch                   ==> to see all branches
+git config --list	                ====> to get the list of git configrations
 <br>
-git branch <anyname>         ==> to create a branch with name
+git config --global --edit        ====> edit configrations from editor
 <br>
-git checkout <exist branch>  ==> to go to spicified branch
+git init                          ====> to start and create git file
 <br>
-git branch -d <branchNme>    ==> delete spicified branch
+git remote add origin <ssh/http>  ====> to add remote repo to my local repo
 <br>
-git checkout -b <branchNme>  ==> create a branch and go to it direct
+git branch                        ====> to see all branches
 <br>
-git branch -m <newName>      ==> rename current branch
+git branch <anyname>              ====> to create a branch with name
 <br>
-git merge <branchName>       ==> merge the selected branch with the spicified branch
+git checkout <exist branch>       ====> to go to spicified branch
 <br>
-
+git branch -d <branchNme>         ====> delete spicified branch
+<br>
+git checkout -b <branchNme>       ====> create a branch and go to it direct
+<br>
+git branch -m <newName>           ====> rename current branch
+<br>
+git merge <branchName>            ====> merge the selected branch with the spicified branch
+<br>
+git stash list                    ====> check the stash list content
+<br>
+git stash                         ====> add all staged files to stash
+<br>     
+git stash save "anyComment"       ====> to add to stash but with comment
+<br>
+git stash pop                     ====> getout the last item from the stash
+<br> 
+git stash apply                   ====> takes the last item but as copy and keep the original in stash
+<br>
+git stash pop stash@{index}       ====> to access any stash by its index
+<br>
+git stash drop                    ====> to delete a stash with it's content
+<br>
+git stash drop  stash@{index}     ====> to delete a spicific stash by its index
+<br>
+git stash clear                   ====> delete all stash elements 
+<br>
+git stash show                    ====> show last stash content
+<br>
+git stash show  stash@{index}     ====> show a spicific stash content by its index
 
 
 ---
-
 ## Explane :
 
 git add <unStaged file name 1> <unStaged file name 2> ..etc
@@ -103,7 +129,6 @@ if i want to set this config
 
 git config --global user.email 'enter any email here and it will be editied'
  
-
 ---
 ## Explane :
 
@@ -124,3 +149,27 @@ select main branch and then we do :
 git merge <branchName>
 
 ---
+## Explane :
+
+if i have some files that i dont want to upload on github i can use stash 
+- add the files that you need to stage (git add .)
+- stash them by  ( git stash )
+
+---
+## Explane :
+
+if i did push to remote but i want to cancel it 
+- git log 
+- git reset --hard 'last commit i need id'
+- all commits after this are deleted so i can push now
+- git push origin main --force 
+
+---
+## Example :
+how to ignore files :
+- i create file called .gitignore
+- in this file i can write what ever i want and git will ignore it 
+- inside .gitignore file we can write as the following >>
+- *.txt   ===>     to ignore all files with .txt
+- !meow.txt   ===> from above we ignore all .txt files but here i said all except meow.txt
+- folderName/ ===> ignore a folder with this name
